@@ -11,7 +11,8 @@ public class AbilityController : MonoBehaviour {
 	public int numberOfBomb;
 	public int currentBomb;
 	public int strengthOfBomb;
-	public bool Pushable;
+	public bool pushable;
+	public bool throwable;
 
 	// Use this for initialization
 	void Start () {
@@ -63,14 +64,17 @@ public class AbilityController : MonoBehaviour {
 	}
 	public void doPushable()
 	{
-		Pushable = !Pushable;
+		pushable = !pushable;
 	}
 
 	public void DoDevil()
 	{
 		speed = -speed;
 	}
-
+	public void doThrow()
+	{
+		throwable = !throwable;
+	}
 	public bool isNeg()
 	{
 		if (speed > 0f) {

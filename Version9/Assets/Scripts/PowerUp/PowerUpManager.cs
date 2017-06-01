@@ -10,6 +10,7 @@ public class PowerUpManager : MonoBehaviour {
 	private bool addBombStr;
 	private bool addBombNum;
 	private bool pushBomb;
+	private bool throwBomb;
 	private float powerupLengthCounter;
 	private AbilityController logicman;
 	// Use this for initialization
@@ -43,25 +44,32 @@ public class PowerUpManager : MonoBehaviour {
 				logicman.doPushable ();
 				pushBomb = false;
 			}
-
+			if (throwBomb) {
+				logicman.doThrow ();
+				throwBomb = false;
+			}
 			if (powerupLengthCounter <= 0) {
 				if (logicman.isNeg()) {
 					logicman.DoDevil ();
 				}
-				if (logicman.Pushable) {
+				if (logicman.pushable) {
 					logicman.doPushable();
+				}
+				if (logicman.throwable) {
+					logicman.doThrow ();
 				}
 				devilwalk = false;
 				powerupActive = false;
 			}
 		}
 	}
-	public void ActivatePowerUp(bool point, bool speed, bool strength, bool num, bool push, float time) {
+	public void ActivatePowerUp(bool point, bool speed, bool strength, bool num, bool push, bool thro,float time) {
 		devilwalk  = point;
 		speedup    = speed;
 		addBombNum = num;
 		addBombStr = strength;
 		pushBomb   = push;
+		throwBomb  = thro;
 		powerupActive = true;
 		powerupLengthCounter = time;
 	}

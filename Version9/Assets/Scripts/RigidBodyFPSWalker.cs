@@ -15,7 +15,7 @@ public class RigidBodyFPSWalker : AbilityController {
 	public GameObject standbyCamera;
 
 	//public bool backward = false;
-	//public bool pickUp = false;
+	public bool pickUp = false;
 	//控制哪個相機的視角
 	bool cameraState=false;
 	SpawnSpot[] spawnSpots;
@@ -67,10 +67,10 @@ public class RigidBodyFPSWalker : AbilityController {
 		/*
 		if (pickUp == true && Input.GetKeyDown (KeyCode.C)) {
 			Vector3 pos = new Vector3 (0, 2f, 0);
-			GameObject bullet= PhotonNetwork.Instantiate ("Glove", transform.position, Quaternion.identity,0);
+			GameObject bullet= PhotonNetwork.Instantiate ("Bomb", transform.position, Quaternion.identity,0);
 			bullet.GetComponent<Rigidbody> ().AddForce (transform.forward * 800.0f);
-			Destroy (transform.FindChild ("Glove").gameObject);
-			pickUp = false;
+			Destroy (transform.FindChild ("fakeBomb").gameObject);
+			throwable = false;
 		}*/
 	}
 

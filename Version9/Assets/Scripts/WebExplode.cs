@@ -70,7 +70,7 @@ public class WebExplode : MonoBehaviour {
 	}
 
 	public void OnCollisionEnter(Collision other) {
-		if (other.rigidbody.CompareTag ("Player") && other.rigidbody.GetComponent<AbilityController> ().Pushable) {
+		if (other.rigidbody.CompareTag ("Player") && other.rigidbody.GetComponent<AbilityController> ().pushable) {
 			Moveable = true;
 			Vector3 pos = new Vector3 (transform.position.x - other.rigidbody.position.x, 0f, transform.position.z - other.rigidbody.position.z);
 			bombDir = pos;

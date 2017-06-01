@@ -45,14 +45,14 @@ public class WebBomb : MonoBehaviour {
 			transform.GetComponent<PhotonView> ().RPC ("applyDead", PhotonTargets.AllBuffered);
 
 		} /*
-		if (other.CompareTag ("Glove")&& gameObject.GetComponent<RigidBodyFPSWalker>().pickUp==false) {
+		if (other.CompareTag ("Bomb") && gameObject.GetComponent<RigidBodyFPSWalker>().pickUp == false && Input.GetKeyDown("C")) {
 			Debug.Log ("hit");
 			//call在 RigidbodyFPSWalker
 			Vector3 pos = new Vector3(0,2f,0); 
 			other.gameObject.transform.position = transform.position + pos;
 			other.gameObject.GetComponent<SphereCollider> ().enabled = false;
 			other.gameObject.transform.parent = transform;
-			gameObject.GetComponent<RigidBodyFPSWalker>().pickUp=true;
+			gameObject.GetComponent<RigidBodyFPSWalker>().pickUp = true;
 		} */
 
 	}

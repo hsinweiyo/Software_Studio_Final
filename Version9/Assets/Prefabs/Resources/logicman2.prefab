@@ -855,7 +855,7 @@ MonoBehaviour:
   numberOfBomb: 1
   currentBomb: 1
   strengthOfBomb: 10
-  Pushable: 1
+  Pushable: 0
   gravity: 10
   maxVelocityChange: 10
   canJump: 1

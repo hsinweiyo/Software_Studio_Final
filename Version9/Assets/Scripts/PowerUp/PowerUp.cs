@@ -13,6 +13,8 @@ public class PowerUp : MonoBehaviour {
 	public bool addBombNum;
 	/* 可以推炸彈 */
 	public bool pushBomb;
+	/* 可以丟炸彈 */
+	public bool throwBomb;
 	/* 道具可以持續的時間 */
 	public float powerupLength;
 	/* 定義道具旋轉速度 */
@@ -39,7 +41,7 @@ public class PowerUp : MonoBehaviour {
 			/* 確認 manager 有得到值 */
 			if (manager != null) {
 				/* 傳進去所有可能的道具參數 */
-				manager.ActivatePowerUp (devilwalk, speedup, addBombStr, addBombNum, pushBomb, powerupLength);
+				manager.ActivatePowerUp (devilwalk, speedup, addBombStr, addBombNum, pushBomb, throwBomb, powerupLength);
 				/* 把道具吃掉 */
 				Destroy (gameObject);
 			}
