@@ -1,130 +1,80 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class Pickupable : MonoBehaviour {
-	/*
-	GameObject mainCamera;
-	public bool carrying;
-	GameObject carryObject;
-	public float distance;*/
-	GameObject mainCamera;
-	GameObject carriedObject;
-	bool carrying;
-	public float distance;
-	public float smooth;
-	public float rayDistance;
-	float startYRotation;
-	float deltaRotation;
-	float yRotation;
-	float previousUp;
-	Quaternion offset;
-	// Use this for initialization
-	void Start () {
-		carriedObject = GameObject.FindWithTag ("test");
+public class ThrowObject : MonoBehaviour
+{
+	public Transform player;
+	public Transform playerCam;
+	public float throwForce = 10;
+	bool hasPlayer = false;
+	bool beingCarried = false;
+	//public AudioClip[] soundToPlay;
+	//private AudioSource audio;
+	public int dmg;
+	private bool touched = false;
+
+	void Start()
+	{
+		//audio = GetComponent<AudioSource>();
 	}
 
-	// Update is called once per frame
-	/*
-	void Update () {
-		if (mainCamera == null) {
-			mainCamera = GameObject.FindWithTag ("PlayerCamera");
+	void Update()
+	{
+		float dist = Vector3.Distance(gameObject.transform.position, player.position);
+		if (dist <= 2.5f)
+		{
+			hasPlayer = true;
 		}
-		if (carryObject == null) {
-			carryObject = GameObject.FindWithTag ("test");
+		else
+		{
+			hasPlayer = false;
 		}
-		if (carrying) {
-			carry (carryObject);
-
-		} else {
-			pickup ();
-
+		if (hasPlayer && Input.GetKeyDown("E"))
+		{
+			GetComponent<Rigidbody>().isKinematic = true;
+			transform.parent = playerCam;
+			beingCarried = true;
 		}
-	}
-	void carry(GameObject obj){
-		obj.GetComponent<Rigidbody> ().isKinematic = true;
-		obj.transform.position = mainCamera.transform.position + mainCamera.transform.forward;
-
-	}
-	void pickup() {
-		if (Input.GetKeyDown (KeyCode.E)) {
-			//Debug.Log ("Press");
-			int x = Screen.width / 2;
-			int y = Screen.height / 2;
-
-			Ray ray = mainCamera.GetComponent<Camera> ().ScreenPointToRay (new Vector3 (x, y));
-			RaycastHit hit;
-			if(Physics.Raycast(ray, out hit)) {
-				Pickupable p = hit.collider.GetComponent<Pickupable>();
-				//if(p != null) {
-					carrying = true;
-					carryObject = p.gameObject;
-				//}
+		if (beingCarried)
+		{
+			if (touched)
+			{
+				GetComponent<Rigidbody>().isKinematic = false;
+				transform.parent = null;
+				beingCarried = false;
+				touched = false;
+			}
+			if (Input.GetMouseButtonDown(0))
+			{
+				GetComponent<Rigidbody>().isKinematic = false;
+				transform.parent = null;
+				beingCarried = false;
+				GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
+				//RandomAudio();
+			}
+			else if (Input.GetMouseButtonDown(1))
+			{
+				GetComponent<Rigidbody>().isKinematic = false;
+				transform.parent = null;
+				beingCarried = false;
 			}
 		}
+	}
+	/*
+	void RandomAudio()
+	{
+		if (audio.isPlaying){
+			return;
+		}
+		audio.clip = soundToPlay[Random.Range(0, soundToPlay.Length)];
+		audio.Play();
 
 	}*/
-	void Update () {
-		if (mainCamera == null) {
-			mainCamera = GameObject.FindWithTag ("PlayerCamera");
+	void OnTriggerEnter()
+	{
+		if (beingCarried)
+		{
+			touched = true;
 		}
-		if (carriedObject == null) {
-			carriedObject = GameObject.FindWithTag ("test");
-		}
-		if (carrying) {
-			carry (carriedObject);
-			checkDrop ();
-		} else {
-			pickup ();
-		}
-	}
-
-	void carry(GameObject o) {
-		o.transform.position = Vector3.Lerp (o.transform.position, mainCamera.transform.position +   mainCamera.transform.forward * distance, Time.deltaTime*smooth);
-
-		deltaRotation = previousUp - mainCamera.transform.eulerAngles.y;
-		yRotation = startYRotation - deltaRotation;
-
-		Quaternion target = Quaternion.Euler (0, yRotation, 0);
-		o.transform.rotation = Quaternion.Slerp (o.transform.rotation, target, Time.deltaTime * 3);
-	}
-
-	void pickup() {
-		if(Input.GetKeyDown (KeyCode.E)) {
-			int x = Screen.width / 2;
-			int y = Screen.height / 2;
-
-			Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
-			RaycastHit hit;
-
-			//if(Physics.Raycast(ray, out hit,rayDistance)) {
-				//Pickupable p = hit.collider.GetComponent<Pickupable>();
-
-				//if(p!=null) {
-					//if (Input.GetKeyDown (KeyCode.E)) {
-						carrying = true;
-						//carriedObject = p.gameObject;
-						//p.GetComponent<Rigidbody> ().useGravity = false;
-			carriedObject = transform.GetComponent<Rigidbody>().gameObject;
-						previousUp = mainCamera.transform.eulerAngles.y; 
-						startYRotation = carriedObject.transform.eulerAngles.y;
-
-					//}
-				//}
-			//}
-		}
-	}
-
-	void checkDrop() {
-		if(Input.GetKeyDown (KeyCode.E)){
-			dropObject();
-		}
-	}
-
-
-	void dropObject () {
-		carrying = false;
-		carriedObject.GetComponent<Rigidbody> ().useGravity = true;
-		carriedObject = null;
 	}
 }

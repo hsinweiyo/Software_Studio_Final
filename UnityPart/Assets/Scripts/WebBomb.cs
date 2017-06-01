@@ -21,7 +21,7 @@ public class WebBomb : MonoBehaviour {
 	public void DropBumb()
 	{
 		
-		Vector3 newPos = new Vector3 ( transform.position.x+4f,  transform.position.y-1f,  transform.position.z+1.5f);
+		Vector3 newPos = new Vector3 ( transform.position.x+1.5f,  transform.position.y-1f,  transform.position.z+1.5f);
 		//生成炸彈
 		PhotonNetwork.Instantiate("Bomb", newPos, transform.rotation,0);
 	}

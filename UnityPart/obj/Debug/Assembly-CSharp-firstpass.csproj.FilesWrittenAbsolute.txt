@@ -22,3 +22,27 @@
 /Users/hsinweiyo/Desktop/Photon/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/hsinweiyo/Desktop/Photon/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/hsinweiyo/Desktop/Photon/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/UnityEngine.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/UnityEditor.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/UnityEngine.TestRunner.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/nunit.framework.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Photon3Unity3D.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/websocket-sharp.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Mono.Cecil.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Unity.DataContract.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Temp/bin/Debug/Mono.Cecil.Mdb.dll

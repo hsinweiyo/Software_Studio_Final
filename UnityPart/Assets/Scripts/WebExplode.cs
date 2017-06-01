@@ -15,10 +15,11 @@ public class WebExplode : MonoBehaviour {
 		Invoke ("Explode", 5f);
 		logicman = FindObjectOfType<RigidBodyFPSWalker> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		bombStr = logicman.strengthOfBomb;
+
 		if (Moveable) {
 			transform.Translate (bombDir * moveSpeed * Time.deltaTime);
 		}
@@ -55,7 +56,7 @@ public class WebExplode : MonoBehaviour {
 			} else {
 				Debug.Log (hit.transform.tag);
 				/*if (hit.transform.tag == "Player") {
-					
+
 					hit.collider.transform.GetComponent<PhotonView> ().RPC ("applyDead", PhotonTargets.AllBuffered,null);
 				}*/
 				break;
@@ -83,6 +84,4 @@ public class WebExplode : MonoBehaviour {
 			Moveable = false;
 		}
 	}
-
-
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerupManager : MonoBehaviour {
-	
+
 
 	private bool powerupActive;
 
@@ -11,6 +11,7 @@ public class PowerupManager : MonoBehaviour {
 	private bool speedup;
 	private bool addBombStr;
 	private bool addBombNum;
+
 	private bool pushBomb;
 
 	private float powerupLengthCounter;
@@ -20,9 +21,10 @@ public class PowerupManager : MonoBehaviour {
 	void Start () {
 		logicman = transform.GetComponent<RigidBodyFPSWalker> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
+		
 		if (powerupActive) {
 			powerupLengthCounter -= Time.deltaTime;
 

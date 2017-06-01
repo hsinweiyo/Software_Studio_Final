@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{667D5EB3-F05E-8028-7046-B028381FA56D}</ProjectGuid>
+    <ProjectGuid>{8433BEEC-EB7C-F197-7054-494498869F1B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\HoldItem.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" />
      <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
@@ -123,6 +124,7 @@
      <Compile Include="Assets\Scripts\DataControl.cs" />
      <Compile Include="Assets\Scripts\DestroySelf.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\HoldItem.cs" />
      <Compile Include="Assets\Scripts\JoystickToEvents.cs" />
      <Compile Include="Assets\Scripts\Locomotion.cs" />
      <Compile Include="Assets\Scripts\LocomotionPlayer.cs" />
@@ -139,6 +141,7 @@
      <Compile Include="Assets\Scripts\WebExplode.cs" />
      <Compile Include="Assets\Scripts\playertransition.cs" />
      <Compile Include="Assets\Scripts\sctCharRot.cs" />
+     <Compile Include="Assets\pickupable.cs" />
      <None Include="Assets\Photon Unity Networking\link.xml" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Plugins\release_history.txt" />
@@ -146,7 +149,7 @@
      <None Include="Assets\_Imported\FREE Food Pack\Shaders\Food.shader" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>/Users/hsinweiyo/Desktop/Photon/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -170,15 +173,15 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>/Users/hsinweiyo/Desktop/Photon/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>/Users/hsinweiyo/Desktop/Photon/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>/Users/hsinweiyo/Documents/NTHU 105 academic year spring semester/Software Design Lab/Final_Project/UnityPart/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{12F87CA3-08A3-D1AF-5B5C-C4C47A060EC4}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{84339833-C3B3-8D19-2578-B5C21BDE46D0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
